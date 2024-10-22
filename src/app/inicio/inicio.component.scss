@@ -1,0 +1,96 @@
+/* styles.css */
+/* General styles */
+:host {
+  display: block;
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos el alto de la ventana */
+  background-image: url('/assets/imagenes/fondo.jpg'); /* Ruta absoluta desde la raíz del proyecto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Permite que los elementos con position: absolute se posicionen respecto a este contenedor */
+}
+
+.content {
+  padding: 189px 20px 350px; /* Aumenta el espacio en la parte inferior para el contenedor de enlaces de redes sociales */
+  box-sizing: border-box; /* Incluye el padding en el ancho total del contenedor */
+
+}
+
+
+.page-title {
+  font-size: 40px; /* Tamaño del texto del título */
+  margin: 0px 0; /* Margen arriba y abajo */
+  color: white;
+  text-align: center;
+
+}
+
+/* Estilo para el contenedor de enlaces de redes sociales */
+.social-links-container {
+  position: absolute; /* Posiciona el contenedor dentro del contenedor principal */
+  bottom: -100px; /* Mueve el contenedor más abajo en relación con el contenedor principal */
+  left: 0; /* Ajusta el espacio desde la izquierda del contenedor principal */
+  width: 100%; /* Asegura que el contenedor de enlaces ocupe todo el ancho disponible */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para visibilidad */
+  padding: 10px 20px; /* Espacio interno alrededor de los enlaces */
+  box-sizing: border-box; /* Incluye el padding en el ancho total del contenedor */
+  display: flex; /* Alinea los enlaces en una fila */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+}
+
+/* Estilo para los enlaces de redes sociales */
+.social-link {
+  color: white;
+  text-decoration: none;
+  font-size: 45px;
+  margin: 0 15px; /* Espacio entre enlaces */
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: #CCC40E; /* Color al pasar el mouse */
+}
+
+
+.clientes-container {
+  padding: 3px 20px; /* Espacio interior */
+  background-color:  #ffffff; /* Fondo suave para la sección */
+  text-align: center; /* Alinea el contenido al centro */
+
+}
+/* Estilo para la sección 'Nuestros Clientes' */
+.clientes-title {
+  font-family:'Roboto', Inika;  /* Fuente personalizada */
+  font-size: 36px; /* Tamaño del texto */
+  font-weight: 600; /* Peso de la fuente */
+  color: #333; /* Color del texto */
+  margin-bottom: 30px; /* Espacio debajo del título */
+}
+
+.clientes-gallery {
+  display: flex; /* Usa Flexbox para alinear las imágenes */
+  justify-content: center; /* Centra las imágenes en la sección */
+  gap: 20px; /* Espacio entre las imágenes */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+  white-space: nowrap; /* Evita el salto de línea */
+  background-color:  #ffffff; /* Fondo suave para la sección */
+
+}
+
+.cliente-item {
+  flex: 0 0 auto; /* Impide que los elementos se redimensionen */
+  height: 135px; /* Altura fija para las imágenes */
+  box-sizing: border-box; /* Incluye el padding en el ancho total del contenedor */
+
+
+}
+
+.cliente-item img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+  height: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+  display: block; /* Elimina el espacio debajo de las imágenes */
+  object-fit: cover; /* Cubre el contenedor mientras mantiene la proporción */
+
+
+}
+

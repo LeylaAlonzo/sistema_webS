@@ -1,0 +1,71 @@
+<div class="contact-container">
+  <div class="contact-form-container">
+    <h2>Contacto</h2>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">
+          <input id="name" formControlName="nombre" type="text" placeholder="Nombre" autocomplete="off" />
+        </label>
+        <div *ngIf="contactForm.get('nombre')?.invalid && contactForm.get('nombre')?.touched" class="error">
+          El nombre es requerido.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">
+          <input id="email" formControlName="email" type="email" placeholder="Correo electrónico" autocomplete="off" />
+        </label>
+        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error">
+          Se requiere un correo electrónico válido.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">
+          <input id="phone" formControlName="telefono" type="text" placeholder="Teléfono" autocomplete="off" />
+        </label>
+        <div *ngIf="contactForm.get('telefono')?.invalid && contactForm.get('telefono')?.touched" class="error">
+          El teléfono debe ser un número de 8 dígitos.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comment">
+          <textarea id="comment" formControlName="comentario" placeholder="Comentario"></textarea>
+        </label>
+        <div *ngIf="contactForm.get('comentario')?.invalid && contactForm.get('comentario')?.touched" class="error">
+          El comentario es requerido.
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="contactForm.invalid">Enviar</button>
+    </form>
+
+    <!-- Mensaje de estado -->
+    <div *ngIf="mensaje" class="message">{{ mensaje }}</div>
+  </div>
+
+  <!-- Datos de la empresa -->
+  <div class="contact-icons">
+    <h2>Datos de la empresa</h2>
+    <ul>
+      <li><span class="material-icons">location_on</span> Ciudad de Guatemala</li>
+      <li><span class="material-icons">phone</span> +(502) 5456-9378</li>
+      <li><span class="material-icons">email</span> serviciosjr23&#64;gmail.com</li>
+    </ul>
+  </div>
+
+  <!-- Imágenes de Redes Sociales -->
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/50242111021" target="_blank">
+      <img src="/assets/imagenes/whasapp.png" alt="WhatsApp" />
+    </a>
+    <a href="https://www.facebook.com/tu-pagina" target="_blank">
+      <img src="/assets/imagenes/facebook.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/tu-pagina" target="_blank">
+      <img src="/assets/imagenes/instagram1.jpeg" alt="Instagram" />
+    </a>
+  </div>
+</div>

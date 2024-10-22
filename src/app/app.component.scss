@@ -1,0 +1,54 @@
+.navbar {
+  background-color: #1E0D0D; /* Color de fondo de la barra */
+  padding: 20px;
+  font-family: 'Roboto', Inika;
+  position: sticky; /* Hace que la barra de navegación se quede fija cuando haces scroll */
+  top: 0; /* Se queda en la parte superior cuando llegas a ella */
+  z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 13px 20px; /* Aumenta el padding para que el botón sea más grande */
+  font-size: 16px;
+  font-weight: 500; /* Peso de la fuente para mayor énfasis */
+  border-radius: 50px; /* Hace los botones redondos */
+  background-color: #444; /* Color de fondo del botón */
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-block; /* Asegura que el padding se aplique correctamente */
+  text-align: center; /* Centra el texto dentro del botón */
+  margin: 0 10px; /* Espacio entre botones */
+}
+
+.nav-link:hover {
+  background-color: #CCC40E; /* Color de fondo al pasar el mouse */
+  transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+.info-bar {
+  background-color: #CCC40E; /* Fondo de la barra */
+  color: rgb(63, 61, 61); /* Color del texto */
+  text-align: center; /* Centra el texto */
+  padding: 20px 0; /* Espacio interno más grande para mayor separación */
+  font-family: 'Roboto', Inika; /* Fuente personalizada */
+  font-size: 25px; /* Tamaño de la fuente */
+  margin-top: 20px; /* Agrega más espacio encima si es necesario */
+}
+
+.info-bar span {
+  font-family: 'Roboto', Inika; /* Fuente diferente para el correo */
+}
+
+.info-bar p {
+  margin: 0; /* Elimina el margen por defecto del párrafo */
+
+}
+
+

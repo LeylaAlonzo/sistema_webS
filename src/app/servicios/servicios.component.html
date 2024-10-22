@@ -1,0 +1,27 @@
+
+<div class="container">
+  <h2 class="servicios-titulo">Nuestros Servicios</h2> <!-- Título agregado -->
+  <div class="servicios-container"> <!-- Mantener el contenedor de servicios -->
+    <div class="servicio-card" *ngFor="let servicio of servicios">
+      <h3>{{ servicio.NombreServicio }}</h3>
+      <p>{{ servicio.Descripcion }}</p>
+
+      <img [src]="servicio.RutaImagen" alt="{{ servicio.NombreServicio }}" *ngIf="servicio.RutaImagen" class="servicio-imagen">
+    <!-- Botón para seleccionar el servicio -->
+    <button (click)="seleccionarServicio(servicio.NombreServicio)">Seleccionar este servicio</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="whatsapp-icon">
+  <a href="https://wa.me/50242111021" target="_blank">
+    <img src="/assets/imagenes/whasapp.png" alt="WhatsApp" />
+  </a>
+  <a href="https://www.facebook.com/tu-pagina" target="_blank">
+    <img src="/assets/imagenes/facebook.png" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/tu-pagina" target="_blank">
+    <img src="/assets/imagenes/instagram1.jpeg" alt="Instagram" />
+  </a>
+</div>

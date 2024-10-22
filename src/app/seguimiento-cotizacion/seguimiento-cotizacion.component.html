@@ -1,0 +1,42 @@
+<div class="seguimiento-cotizacion-container">
+  <h2>Consultar Cotización</h2>
+
+  <form (ngSubmit)="buscarCotizacion()" [formGroup]="seguimientoForm" autocomplete="off">
+    <div class="form-group">
+      <label for="codigo">Código de Cotización:</label>
+      <input id="codigo" formControlName="codigo" type="text" class="form-control" required autocomplete="off">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Buscar Cotización</button>
+  </form>
+
+  <!-- Mostrar el resultado de la búsqueda -->
+  <div *ngIf="cotizacion" class="resultado-cotizacion">
+    <h3>Detalle de Cotización</h3>
+    <p><strong>Nombre:</strong> {{ cotizacion.Nombre }}</p>
+    <p><strong>Correo:</strong> {{ cotizacion.Email }}</p>
+    <p><strong>Teléfono:</strong> {{ cotizacion.Telefono }}</p>
+    <p><strong>Servicios:</strong> {{ cotizacion.Servicios }}</p>
+    <p><strong>Detalles:</strong> {{ cotizacion.DetallesA }}</p>
+    <p><strong>Estado:</strong> {{ cotizacion.Estado }}</p>
+    <p><strong>Código de Cotización:</strong> {{ cotizacion.CodigoCotizacion }}</p>
+  </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="mensajeError" class="error-mensaje">
+    {{ mensajeError }}
+  </div>
+</div>
+
+<!-- Sección de íconos de redes sociales -->
+<div class="whatsapp-icon">
+  <a href="https://wa.me/50242111021" target="_blank">
+    <img src="/assets/imagenes/whasapp.png" alt="WhatsApp" />
+  </a>
+  <a href="https://www.facebook.com/tu-pagina" target="_blank">
+    <img src="/assets/imagenes/facebook.png" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/tu-pagina" target="_blank">
+    <img src="/assets/imagenes/instagram1.jpeg" alt="Instagram" />
+  </a>
+</div>

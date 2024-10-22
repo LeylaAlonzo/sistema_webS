@@ -1,0 +1,238 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px; /* Espacio entre el formulario y los datos */
+  padding: 30px; /* Agrega un poco de padding alrededor */
+  background-color: #ffffff; /* Fondo para toda la sección de contacto */
+  margin-bottom: 0px; /* Espacio entre la barra y el formulario/contacto */
+}
+
+.contact-form-container, .contact-icons {
+  flex: 1; /* Ambos ocupan el mismo espacio dentro del contenedor */
+}
+
+.contact-form-container {
+  padding: 50px;
+  background-color: #b8b9b8;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icons {
+  padding: 135px;
+  background-color: #fcfcfe;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: rgb(5, 5, 5); /* Color de texto para que contraste con el fondo */
+  font-size: 20px;
+}
+
+.contact-icons ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Elimina el margen para evitar desplazamientos */
+}
+
+.contact-icons li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 23px; /* Tamaño de fuente más grande para los ítems de contacto */
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: inherit; /* Hereda el color del elemento padre */
+  display: flex;
+  align-items: center;
+}
+
+.contact-icons .material-icons {
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.contact-icon {
+  width: 100px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+  height: 100px; /* Mantén la altura proporcional al ancho */
+  margin-right: 10px; /* Espacio entre las imágenes */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', Inika;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 92%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto', Inika;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  width: 50%;
+  padding: 12px;
+  background-color: #425d42;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.submit-btn:hover {
+  background-color: #777c78;
+}
+
+.whatsapp-icon {
+  position: fixed; /* Fija el ícono en la pantalla */
+  bottom: 50px; /* A 20px desde la parte inferior de la ventana */
+  right: 50px; /* A 20px desde la parte derecha de la ventana */
+  z-index: 1000; /* Asegura que el ícono esté por encima de otros elementos */
+}
+
+.whatsapp-icon img {
+  width: 60px; /* Ajusta el tamaño del ícono */
+  height: 60px;
+  border-radius: 50%; /* Hacer que el ícono sea redondo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave */
+  transition: transform 0.3s; /* Animación suave al pasar el mouse */
+}
+
+.whatsapp-icon img:hover {
+  transform: scale(1.1); /* Agranda el ícono al pasar el mouse */
+}
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px; // Espacio entre el formulario y los datos
+  padding: 30px; // Agrega un poco de padding alrededor
+  background-color: #ffffff; // Fondo para toda la sección de contacto
+  margin-bottom: 0; // Espacio entre la barra y el formulario/contacto
+}
+
+.contact-form-container,
+.contact-icons {
+  flex: 1; // Ambos ocupan el mismo espacio dentro del contenedor
+}
+
+.contact-form-container {
+  padding: 50px;
+  background-color: #b8b9b8;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icons {
+  padding: 135px;
+  background-color: #fcfcfe;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: rgb(5, 5, 5); // Color de texto para que contraste con el fondo
+  font-size: 20px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; // Elimina el margen para evitar desplazamientos
+
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 23px; // Tamaño de fuente más grande para los ítems de contacto
+
+      a {
+        text-decoration: none;
+        color: inherit; // Hereda el color del elemento padre
+        display: flex;
+        align-items: center;
+
+        .material-icons {
+          font-size: 30px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.contact-icon {
+  width: 100px; // Ajusta el tamaño de las imágenes según tus necesidades
+  height: 100px; // Mantén la altura proporcional al ancho
+  margin-right: 10px; // Espacio entre las imágenes
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', Inika;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 92%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: 'Roboto', Inika;
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.submit-btn {
+  display: block;
+  width: 50%;
+  padding: 12px;
+  background-color: #425d42;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #777c78;
+  }
+}
+
+.whatsapp-icon {
+  position: fixed; // Fija el ícono en la pantalla
+  bottom: 50px; // A 50px desde la parte inferior de la ventana
+  right: 50px; // A 50px desde la parte derecha de la ventana
+  z-index: 1000; // Asegura que el ícono esté por encima de otros elementos
+
+  img {
+    width: 60px; // Ajusta el tamaño del ícono
+    height: 60px;
+    border-radius: 50%; // Hacer que el ícono sea redondo
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Agrega una sombra suave
+    transition: transform 0.3s; // Animación suave al pasar el mouse
+
+    &:hover {
+      transform: scale(1.1); // Agranda el ícono al pasar el mouse
+    }
+  }
+}

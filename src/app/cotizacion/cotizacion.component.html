@@ -1,0 +1,85 @@
+  <!-- Botón para regresar a la página de servicios -->
+  <button (click)="regresarAServicios()" class="boton-flecha">Regresar</button>
+  <!-- Sección de comentario profesional -->
+  <div class="cuadro-comentario">
+    <p class="comentario-titulo">¡Solicita tu Cotización Sin Compromiso!</p>
+    <p class="comentario-texto">
+      En Servicios Varios y Remodelación J&R, estamos dedicados a ofrecerte el mejor servicio en construcción y remodelación. Entendemos que cada proyecto es único y queremos ayudarte a dar el primer paso hacia la realización de tus sueños.
+    </p>
+    <p class="comentario-texto">
+      Completa el formulario de cotización y descubre cómo podemos transformar tus ideas en realidad. Nuestro equipo estará encantado de asesorarte y ofrecerte una propuesta personalizada que se ajuste a tus necesidades y presupuesto.
+    </p>
+    <p class="comentario-texto">
+      ¡No esperes más! Tu proyecto puede comenzar hoy mismo.
+    </p>
+  </div>
+
+  <!-- Sección de íconos de redes sociales -->
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/50242111021" target="_blank">
+      <img src="/assets/imagenes/whasapp.png" alt="WhatsApp" />
+    </a>
+    <a href="https://www.facebook.com/tu-pagina" target="_blank">
+      <img src="/assets/imagenes/facebook.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/tu-pagina" target="_blank">
+      <img src="/assets/imagenes/instagram1.jpeg" alt="Instagram" />
+    </a>
+  </div>
+
+  <!-- Muestra el código de cotización generado -->
+  <div *ngIf="codigoCotizacion" class="mensaje-exito">
+    <h2>¡Cotización Enviada!</h2>
+    <p>Tu cotización ha sido guardada con éxito. Tu código es: <strong>{{ codigoCotizacion }}</strong></p>
+  </div>
+
+  <!-- Sección de formulario de cotización -->
+  <div class="cotizacion-form-container">
+    <h2>Solicitud de Cotización</h2>
+    <form (ngSubmit)="onSubmit()" [formGroup]="cotizacionForm">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" formControlName="nombre" type="text" class="form-control" required autocomplete="off">
+        <div *ngIf="cotizacionForm.get('nombre')?.invalid && cotizacionForm.get('nombre')?.touched" class="error">
+          El nombre es requerido.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo Electrónico:</label>
+        <input id="correo" formControlName="correo" type="email" class="form-control" required autocomplete="off">
+        <div *ngIf="cotizacionForm.get('correo')?.invalid && cotizacionForm.get('correo')?.touched" class="error">
+          Ingresa un correo electrónico válido.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" formControlName="telefono" type="tel" class="form-control" required autocomplete="off">
+        <div *ngIf="cotizacionForm.get('telefono')?.invalid && cotizacionForm.get('telefono')?.touched" class="error">
+          Ingresa un número de teléfono válido.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="servicios">Servicios:</label>
+        <select id="servicios" formControlName="servicios" class="form-control" required>
+          <!-- Aquí eliminamos la opción de "Selecciona un servicio" -->
+          <option *ngFor="let servicio of servicios" [value]="servicio">{{ servicio }}</option>
+        </select>
+        <div *ngIf="cotizacionForm.get('servicios')?.invalid && cotizacionForm.get('servicios')?.touched" class="error">
+          Debes seleccionar un servicio.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="detalle">Detalles Adicionales:</label>
+        <textarea id="detalle" formControlName="detalle" class="form-control" rows="4"></textarea>
+      </div>
+
+      <div *ngIf="mensaje" class="mensaje">
+        {{ mensaje }}
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
