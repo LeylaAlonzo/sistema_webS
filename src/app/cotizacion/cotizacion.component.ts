@@ -10,7 +10,19 @@ import { ActivatedRoute, Router } from '@angular/router'; // Importa ActivatedRo
 export class CotizacionComponent implements OnInit {
   cotizacionForm!: FormGroup;
   servicios: string[] = [
-
+    'Cielo Falso',
+    'Tablayeso',
+    'Electricidad',
+    'Colocación de Piso SPC',
+    'Socalo',
+    'Carpintería',
+    'Herrería',
+    'Albañilería',
+    'Plomería',
+    'Sistema de Portones Eléctricos',
+    'Aire Acondicionado',
+    'Puertas y Ventanas de PVC',
+    'Proyecto',
   ];
   codigoCotizacion: number | null = null; // Cambia a tipo number
   mensaje: string = ''; // Propiedad para el mensaje de estado
