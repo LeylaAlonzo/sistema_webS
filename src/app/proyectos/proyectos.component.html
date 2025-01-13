@@ -5,7 +5,8 @@
   <div class="carousel">
     <div class="carousel-images">
       <div *ngFor="let project of projects; let i = index" class="carousel-item" [class.active]="i === currentIndex">
-        <img [src]="project.RutaImagen" [alt]="project.NombreProyecto" class="carousel-image">
+        <img [src]="project.RutaImagen" alt="{{project.NombreProyecto}}"*ngIf="project.RutaImagen" class="carousel-image">
+
         <div class="carousel-caption">
           <h3>{{ project.NombreProyecto }}</h3>
           <p>{{ project.DetallesA }}</p> <!-- Si deseas mostrar más detalles -->
