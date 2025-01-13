@@ -3,7 +3,7 @@
 :host {
   display: block;
   min-height: 100vh; /* Asegura que el contenedor tenga al menos el alto de la ventana */
-  background-image: url('/assets/imagenes/fondo.jpg'); /* Ruta absoluta desde la raíz del proyecto */
+  background-image: url('../../assets/imagenes/fondo.jpg'); /* Ruta absoluta desde la raíz del proyecto */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
