@@ -2,7 +2,7 @@
 /* General styles */
 :host {
   display: block;
-  min-height: 90vh; /* Asegura que el contenedor tenga al menos el alto de la ventana */
+  min-height: 100vh; /* Asegura que el contenedor tenga al menos el alto de la ventana */
   background-image: url('../../assets/imagenes/fondo.jpg'); /* Ruta absoluta desde la raíz del proyecto */
   background-size: cover;
   background-position: center;
@@ -11,7 +11,7 @@
 }
 
 .content {
-  padding: 189px 20px 350px; /* Aumenta el espacio en la parte inferior para el contenedor de enlaces de redes sociales */
+  padding: 160px 20px 350px; /* Aumenta el espacio en la parte inferior para el contenedor de enlaces de redes sociales */
   box-sizing: border-box; /* Incluye el padding en el ancho total del contenedor */
 
 }
@@ -64,7 +64,7 @@
   font-size: 36px; /* Tamaño del texto */
   font-weight: 600; /* Peso de la fuente */
   color: #333; /* Color del texto */
-  margin-bottom: 30px; /* Espacio debajo del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
 .clientes-gallery {
