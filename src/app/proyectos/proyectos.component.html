@@ -1,45 +1,51 @@
-<!-- Título del carrusel -->
+<!-- Botón para redirigir a cotización -->
 <div class="carousel-container">
   <h2 class="carousel-title">Nuestros Proyectos</h2>
-
-  <!-- Contenedor del carrusel -->
   <div class="carousel">
     <div class="carousel-images">
-      <div *ngFor="let project of projects; let i = index" class="carousel-item" [class.active]="i === currentIndex">
-        <!-- Imagen del proyecto -->
-        <img [src]="project.rutaImagen" alt="{{ project.nombre }}" *ngIf="project.rutaImagen" class="carousel-image">
+      <div
+        *ngFor="let project of projects; let i = index"
+        class="carousel-item"
+        [class.active]="i === currentIndex"
+      >
+        <img
+          [src]="project.RutaImagen"
+          alt="{{ project.NombreProyecto }}"
+          *ngIf="project.RutaImagen"
+          class="carousel-image"
+        />
 
-        <!-- Texto superpuesto -->
         <div class="carousel-caption">
-          <h3>{{ project.nombre }}</h3>
-          <p>{{ project.descripcion }}</p>
+          <h3>{{ project.NombreProyecto }}</h3>
+          <p>{{ project.DetallesA }}</p>
         </div>
       </div>
     </div>
-    <!-- Botones de navegación -->
     <button class="carousel-button prev" (click)="prevSlide()">❮</button>
     <button class="carousel-button next" (click)="nextSlide()">❯</button>
   </div>
 
   <!-- Cuadro para mostrar la ubicación del proyecto -->
   <div class="project-location">
-    <p><strong>Ubicación:</strong> {{ projects[currentIndex]?.ubicacion }}</p>
+    <p>Ubicación: {{ projects[currentIndex].Ubicacion }}</p>
   </div>
 
-  <!-- Botón para solicitar cotización -->
-  <button class="cotizacion-button" (click)="irACotizacion()">Solicitar Cotización</button>
 
-  <!-- Íconos de redes sociales -->
-  <div class="whatsapp-icon">
-    <a href="https://wa.me/50242111021" target="_blank">
-      <img src="assets/imagenes/whatsapp.png" alt="WhatsApp" />
-    </a>
-    <a href="https://www.facebook.com/tu-pagina" target="_blank">
-      <img src="assets/imagenes/facebook.png" alt="Facebook" />
-    </a>
-    <a href="https://www.instagram.com/tu-pagina" target="_blank">
-      <img src="assets/imagenes/instagram1.jpeg" alt="Instagram" />
-    </a>
-  </div>
+  <!-- Botón de cotización -->
+  <button class="cotizacion-button" (click)="irACotizacion()">
+    Solicitar Cotización
+  </button>
 </div>
-``
+
+<!-- Iconos de redes sociales -->
+<div class="whatsapp-icon">
+  <a href="https://wa.me/50242111021" target="_blank">
+    <img src="assets/imagenes/whatsapp.png" alt="WhatsApp" />
+  </a>
+  <a href="https://www.facebook.com/tu-pagina" target="_blank">
+    <img src="assets/imagenes/facebook.png" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/tu-pagina" target="_blank">
+    <img src="assets/imagenes/instagram1.jpeg" alt="Instagram" />
+  </a>
+</div>
